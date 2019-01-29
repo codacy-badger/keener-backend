@@ -12,7 +12,7 @@ class Flashcard:
         self.__answer = answer
         self.__group_id = group_id
         self.__creator_id = creator_id
-    
+
     def __str__(self):
         """Return stringified dictionary of this flashcard."""
         return str(self.__dict__)
