@@ -1,0 +1,10 @@
+language: python
+python:
+  - "3.6-dev"
+install:
+  - sudo apt-get update
+  - pip install pipenv
+  - pipenv install --dev
+script:
+  - pipenv run pycodestyle .
+  - pipenv run pydocstyle .
