@@ -7,7 +7,7 @@ class Flashcard:
 
     def __init__(self, question, answer, group_id, creator_id):
         """Create a flashcard."""
-        self.__question_id = uuid.uuid4().int
+        self.__flashcard_id = uuid.uuid4().int
         self.__question = question
         self.__answer = answer
         self.__group_id = group_id
@@ -16,6 +16,10 @@ class Flashcard:
     def __str__(self):
         """Return stringified dictionary of this flashcard."""
         return str(self.__dict__)
+
+    def get_flashcard_id(self):
+        """Get this flashcard's id."""
+        return self.__flashcard_id
 
     def get_question(self):
         """Get this flashcard's question."""
@@ -35,6 +39,8 @@ class Flashcard:
 
     def get_group_id(self):
         """Get this flashcard's associated group id."""
+        return self.__group_id
 
     def get_creator_id(self):
         """Return the user id of the creator of this flashcard."""
+        return self.__creator_id
