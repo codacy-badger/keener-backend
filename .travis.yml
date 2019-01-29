@@ -8,3 +8,4 @@ install:
 script:
   - pipenv run pycodestyle .
   - pipenv run pydocstyle .
+  - pipenv run pytest .
