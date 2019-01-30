@@ -50,7 +50,7 @@ class Group:
         Return non-zero if member id was not present.
         """
         if member_id in self.__member_ids:
-            self.__member_ids.delete(member_id)
+            self.__member_ids.remove(member_id)
             return 0
         else:
             return 1
@@ -70,7 +70,7 @@ class Group:
         Return non-zero if flashcard id was not present.
         """
         if flashcard_id in self.__flashcard_ids:
-            self.__flashcard_ids.delete(flashcard_id)
+            self.__flashcard_ids.remove(flashcard_id)
             return 0
         else:
             return 1

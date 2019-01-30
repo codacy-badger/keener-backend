@@ -27,24 +27,24 @@ def test_get_flashcard_id(flashcard):
 
 def test_get_question(flashcard):
     """Test get_question()."""
-    assert flashcard.get_question() is "question"
+    assert flashcard.get_question() == "question"
 
 
 def test_set_question(flashcard):
     """Test set_question()."""
     flashcard.set_question("another question")
-    assert flashcard.get_question() is "another question"
+    assert flashcard.get_question() == "another question"
 
 
 def test_get_answer(flashcard):
     """Test get_answer()."""
-    assert flashcard.get_answer() is "answer"
+    assert flashcard.get_answer() == "answer"
 
 
 def test_set_answer(flashcard):
     """Test set_answer()."""
     flashcard.set_answer("another answer")
-    assert flashcard.get_answer() is "another answer"
+    assert flashcard.get_answer() == "another answer"
 
 
 def test_get_group_id(flashcard):
