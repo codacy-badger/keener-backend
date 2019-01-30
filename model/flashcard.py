@@ -17,11 +17,11 @@ class Flashcard:
     def __str__(self):
         """Return stringified dictionary of this flashcard."""
         flashcard_dict = {
-            "flashcard_id" : self.__flashcard_id,
-            "question" : self.__question,
-            "answer" : self.__answer,
-            "group_id" : self.__group_id,
-            "creator_id" : self.__creator_id
+            "flashcard_id": self.__flashcard_id,
+            "question": self.__question,
+            "answer": self.__answer,
+            "group_id": self.__group_id,
+            "creator_id": self.__creator_id
         }
         return json.dumps(flashcard_dict)
 
