@@ -1,5 +1,6 @@
 """Represent the data model for a flashcard."""
 import uuid
+import json
 
 
 class Flashcard:
@@ -15,7 +16,14 @@ class Flashcard:
 
     def __str__(self):
         """Return stringified dictionary of this flashcard."""
-        return str(self.__dict__)
+        flashcard_dict = {
+            "flashcard_id" : self.__flashcard_id,
+            "question" : self.__question,
+            "answer" : self.__answer,
+            "group_id" : self.__group_id,
+            "creator_id" : self.__creator_id
+        }
+        return json.dumps(flashcard_dict)
 
     def get_flashcard_id(self):
         """Get this flashcard's id."""

@@ -1,5 +1,6 @@
 """Test the flashcard data model."""
 import pytest
+import json
 from model.flashcard import Flashcard
 
 
@@ -7,6 +8,16 @@ from model.flashcard import Flashcard
 def flashcard():
     """Return an instance of a flashcard."""
     return Flashcard("question", "answer", 0, 0)
+
+
+def test_stringify(flashcard):
+    """Test __str__()."""
+    flashcard_dict = json.loads(flashcard.__str__())
+    assert flashcard_dict.get("flashcard_id") is not None
+    assert flashcard_dict.get("question") is not None
+    assert flashcard_dict.get("answer") is not None
+    assert flashcard_dict.get("group_id") is not None
+    assert flashcard_dict.get("creator_id") is not None
 
 
 def test_get_flashcard_id(flashcard):
