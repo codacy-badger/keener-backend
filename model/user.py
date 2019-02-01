@@ -48,7 +48,7 @@ class User:
 
     def get_given_name(self):
         """Get this user's given name."""
-        return self.__name
+        return self.__given_name
 
     def set_given_name(self, given_name):
         """Set this user's given name."""
@@ -68,7 +68,7 @@ class User:
 
     def add_flashcard_id(self, flashcard_id):
         """Add a flashcard to the user via its id."""
-        self.flashcard_ids.append(flashcard_id)
+        self.__flashcard_ids.append(flashcard_id)
 
     def delete_flashcard_id(self, flashcard_id):
         """
