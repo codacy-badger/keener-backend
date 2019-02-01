@@ -18,8 +18,8 @@ class Group:
         group_dict = {
             "group_id": self.__group_id,
             "group_name": self.__group_name,
-            "member_ids": {},
-            "flashcard_ids": {}
+            "member_ids": self.__member_ids,
+            "flashcard_ids": self.__flashcard_ids
         }
         return json.dumps(group_dict)
 
