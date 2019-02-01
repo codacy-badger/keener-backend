@@ -17,11 +17,11 @@ class User:
     def __str__(self):
         """Return a stringified dictionary of this user."""
         user_dict = {
-            "user_id": self.__user_id
-            "email": self.__email
-            "name": self.__name
-            "given_name": self.__given_name
-            "picture_url": self.__picture_url
+            "user_id": self.__user_id,
+            "email": self.__email,
+            "name": self.__name,
+            "given_name": self.__given_name,
+            "picture_url": self.__picture_url,
             "flashcard_ids": self.__flashcard_ids
         }
         return json.dumps(user_dict)
@@ -41,7 +41,7 @@ class User:
     def get_name(self):
         """Get this user's name."""
         return self.__name
-    
+
     def set_name(self, name):
         """Set this user's name."""
         self.__name = name
@@ -49,11 +49,11 @@ class User:
     def get_given_name(self):
         """Get this user's given name."""
         return self.__name
-    
+
     def set_given_name(self, given_name):
         """Set this user's given name."""
         self.__given_name = given_name
-    
+
     def get_picture_url(self):
         """Get this user's picture url."""
         return self.__picture_url
