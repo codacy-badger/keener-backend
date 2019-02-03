@@ -9,6 +9,11 @@ verify_ssl = true
 pycodestyle = "*"
 pydocstyle = "*"
 pytest = "*"
+flask = "*"
+environs = "*"
+psycopg2 = "*"
+flask-migrate = "*"
+flask-sqlalchemy = "*"
 
 [requires]
 python_version = "3.6"
