@@ -14,6 +14,7 @@ user_group_table = Table("user_group",
 
 class UserModel(db.Model):
     """Model for the user table."""
+
     __tablename__ = "user_table"
 
     id = db.Column(db.Integer, primary_key=True)
@@ -30,6 +31,7 @@ class UserModel(db.Model):
 
 class GroupModel(db.Model):
     """Model for the group table."""
+
     __tablename__ = "group_table"
 
     id = db.Column(db.Integer, primary_key=True)
@@ -41,6 +43,7 @@ class GroupModel(db.Model):
 
 class FlashcardModel(db.Model):
     """Model for the flashcard table."""
+
     __tablename__ = "flashcard_table"
 
     id = db.Column(db.Integer, primary_key=True)
@@ -48,5 +51,5 @@ class FlashcardModel(db.Model):
     answer = db.Column(db.String())
     group_id = db.Column(db.Integer, db.ForeignKey("group_table.id"),
                          nullable=False)
-    creator_id = db.Column(db.Integer, db.ForeignKey("user_table.id")
+    creator_id = db.Column(db.Integer, db.ForeignKey("user_table.id"),
                            nullable=False)
