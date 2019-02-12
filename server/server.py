@@ -5,7 +5,6 @@ from environs import Env
 
 env = Env()
 env.read_env()
-is_testing = env.bool("TESTING")
 
 app = Flask(__name__)
 POSTGRES = {
