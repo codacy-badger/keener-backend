@@ -49,3 +49,20 @@ PSQL_DB=DBNAME
 PSQL_HOST=HOSTNAME
 PSQL_PORT=PORTNUM
 ```
+
+## Scripts
+
+These scripts can help ease the development process:
+Running the following script can run the same check the Travis build runs through on each pull request:
+
+```bash
+$ ./scripts/travis_build.sh
+```
+
+- runs through the same checks the Travis build goes through
+
+```bash
+$ ./scripts/postgres_migrate.sh
+```
+
+- performs the migration of tables to the PostgreSQL database. Uncomment the first line the first time you have to run it.
